@@ -1,9 +1,10 @@
 package animation
 
 import (
-	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/umi-l/open-mario-maker/loader"
 	"image"
+
+	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/umi-l/waloader/loader"
 )
 
 type Animation struct {

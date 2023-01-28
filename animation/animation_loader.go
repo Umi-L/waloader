@@ -1,8 +1,9 @@
 package animation
 
 import (
-	"github.com/umi-l/open-mario-maker/loader"
 	"image"
+
+	"github.com/umi-l/waloader/loader"
 )
 
 func Load(parent *loader.Sheet, index int, frames int, speed float32) Animation {
