@@ -46,7 +46,7 @@ func LoadAtlas(pathToAtlasFolder, atlasName string) map[string]Sprite {
 			sprite := tex.Sprites[i]
 
 			sprite.Rect = image.Rect(sprite.X, sprite.Y, sprite.X+sprite.Width, sprite.Y+sprite.Height)
-			sprite.image = img.SubImage(sprite.Rect).(*ebiten.Image)
+			sprite.Image = img.SubImage(sprite.Rect).(*ebiten.Image)
 
 			sprites[sprite.Name] = sprite
 		}
@@ -56,7 +56,7 @@ func LoadAtlas(pathToAtlasFolder, atlasName string) map[string]Sprite {
 }
 
 func LoadSheet(sprite Sprite, cellWidth int, cellHeight int) Sheet {
-	width, height := sprite.image.Size()
+	width, height := sprite.Image.Size()
 
 	return Sheet{
 		Sprite:      sprite,

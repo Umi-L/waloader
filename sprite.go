@@ -12,6 +12,6 @@ type Sprite struct {
 	Y      int    `xml:"y,attr"`
 	Width  int    `xml:"w,attr"`
 	Height int    `xml:"h,attr"`
-	image  *ebiten.Image
+	Image  *ebiten.Image
 	Rect   image.Rectangle
 }

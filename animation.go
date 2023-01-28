@@ -22,7 +22,7 @@ func (anim *Animation) Draw(screen *ebiten.Image, x float64, y float64, rotation
 	op.GeoM.Translate(x, y)
 	op.GeoM.Rotate(rotation)
 
-	screen.DrawImage(anim.parent.Sprite.image.SubImage(anim.sprites[anim.currentFrame]).(*ebiten.Image), op)
+	screen.DrawImage(anim.parent.Sprite.Image.SubImage(anim.sprites[anim.currentFrame]).(*ebiten.Image), op)
 }
 
 func (anim *Animation) updateTimer(dt float32) {
