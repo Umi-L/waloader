@@ -1,6 +1,7 @@
 <atlas>
-	<tex n="atlas0" w="256" h="128" >
-		<img n="Test-1.png" x="0" y="0" w="128" h="64" />
-		<img n="test2" x="129" y="0" w="32" h="32" />
+	<tex n="atlas0" w="256" h="1024" >
+		<img n="MarioSpriteSheet" x="0" y="0" w="80" h="608" />
+		<img n="Test-1" x="0" y="609" w="128" h="64" />
+		<img n="test-2" x="81" y="0" w="32" h="32" />
 	</tex>
 </atlas>

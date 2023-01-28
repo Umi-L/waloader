@@ -1,14 +1,13 @@
-package animation
+package waloader
 
 import (
 	"image"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/umi-l/waloader/loader"
 )
 
 type Animation struct {
-	parent       *loader.Sheet
+	parent       *Sheet
 	index        int
 	frames       int
 	sprites      []image.Rectangle
@@ -23,7 +22,7 @@ func (anim *Animation) Draw(screen *ebiten.Image, x float64, y float64, rotation
 	op.GeoM.Translate(x, y)
 	op.GeoM.Rotate(rotation)
 
-	screen.DrawImage(anim.parent.Texture.SubImage(anim.sprites[anim.currentFrame]).(*ebiten.Image), op)
+	screen.DrawImage(anim.parent.Sprite.image.SubImage(anim.sprites[anim.currentFrame]).(*ebiten.Image), op)
 }
 
 func (anim *Animation) updateTimer(dt float32) {
