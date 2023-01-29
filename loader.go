@@ -20,6 +20,7 @@ type texture struct {
 }
 
 func LoadAtlas(pathToAtlasFolder, atlasName string) map[string]Sprite {
+
 	dat, err := os.ReadFile(pathToAtlasFolder + atlasName)
 	if err != nil {
 		panic(err)
@@ -45,8 +46,15 @@ func LoadAtlas(pathToAtlasFolder, atlasName string) map[string]Sprite {
 		for i := range tex.Sprites {
 			sprite := tex.Sprites[i]
 
+			//fmt.Printf("Sprite: %+v \n", sprite)
+
 			sprite.Rect = image.Rect(sprite.X, sprite.Y, sprite.X+sprite.Width, sprite.Y+sprite.Height)
+
+			//fmt.Printf("Rect: %+v \n", sprite.Rect)
+
 			sprite.Image = img.SubImage(sprite.Rect).(*ebiten.Image)
+
+			//fmt.Printf("Image: %+v \n", sprite.Image)
 
 			sprites[sprite.Name] = sprite
 		}
